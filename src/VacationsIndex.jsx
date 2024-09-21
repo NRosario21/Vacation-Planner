@@ -3,11 +3,14 @@ export function VacationsIndex({ vacations }) {
     <div>
       <h1>All Vacations </h1>
       {vacations.map((vacation) => (
-        <div key={vacation.flight}>
+        <div key={vacation.id}>
           <h2>{vacation.lodging}</h2>
-          <img src={vacation.url} />
+          <img src={vacation.image_url} />
           <p>Location: {vacation.location}</p>
-          <p>Date: {vacation.date}</p>
+          <p>Flight: {vacation.flight}</p>
+          <p>Cost: {vacation.cost}</p>
+          <p>Start_time: {vacation.start_time}</p>
+          <p>End_time: {vacation.end_time}</p>
         </div>
       ))}
     </div>
